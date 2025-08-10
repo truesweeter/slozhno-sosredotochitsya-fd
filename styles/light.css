@@ -5,8 +5,116 @@
 */
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --bg-image: url('../images/cover-image-light.png');
+  --bg-color: #FFF1F7;
+  --title-color: #FFC2E6;
+  --accent-color: #FF8DCB;
+  --accent-color2: #353430;
+  --button-hover-color: #32312D66;
+}
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto{
+    --bg-image: url('../images/cover-image-light.png');
+    --bg-color: #FFF1F7;
+    --title-color: #FFC2E6;
+    --accent-color: #FF8DCB;
+    --accent-color2: #353430;
+    --button-hover-color: #32312D66;
+  }
+  .theme-auto .decorative-rec {
+    color: transparent;
+  }
+  
+  .theme-auto .decorative-rec::before {
+    display: none;
+  }
+  
+  .theme-auto .header__theme-menu {
+    color: var(--accent-color2);
+  }
+  
+  .theme-auto .header__theme-menu-button_active {
+    outline: 1px solid var(--accent-color2);
+  }
+  
+  .theme-auto .header__theme-menu-button:hover {
+    outline: 1px solid var(--button-hover-color);
+  }
+  
+  .theme-auto .decorative-rec::after {
+    border-top: 1px solid var(--accent-color2);
+    border-right: 1px solid var(--accent-color2);
+  }
+  
+  .theme-auto .header-decor {
+    border-left: 1px solid var(--accent-color2);
+    border-bottom: 1px solid var(--accent-color2);
+  }
+  
+  .theme-auto .main__title {
+    color: var(--accent-color2)
+  }
+  
+  .theme-auto .pictures__title {
+    color: var(--accent-color2);
+  }
+  
+  .theme-auto .footer-decor1 {
+    border-top: 1px solid var(--accent-color2);
+    border-right: 1px solid var(--accent-color2);
+  }
+  
+  .theme-auto .footer-decor2 {
+    border-bottom: 1px solid var(--accent-color2);
+    border-left: 1px solid var(--accent-color2);
+  }
+}
+
+.theme-light .decorative-rec {
+  color: transparent;
+}
+
+.theme-light .decorative-rec::before {
+  display: none;
+}
+
+.theme-light .header__theme-menu {
+  color: var(--accent-color2);
+}
+
+.theme-light .header__theme-menu-button_active {
+  outline: 1px solid var(--accent-color2);
+}
+
+.theme-light .header__theme-menu-button:hover {
+  outline: 1px solid var(--button-hover-color);
+}
+
+.theme-light .decorative-rec::after {
+  border-top: 1px solid var(--accent-color2);
+  border-right: 1px solid var(--accent-color2);
+}
+
+.theme-light .header-decor {
+  border-left: 1px solid var(--accent-color2);
+  border-bottom: 1px solid var(--accent-color2);
+}
+
+.theme-light .main__title {
+  color: var(--accent-color2)
+}
+
+.theme-light .pictures__title {
+  color: var(--accent-color2);
+}
+
+.theme-light .footer-decor1 {
+  border-top: 1px solid var(--accent-color2);
+  border-right: 1px solid var(--accent-color2);
+}
+
+.theme-light .footer-decor2 {
+  border-bottom: 1px solid var(--accent-color2);
+  border-left: 1px solid var(--accent-color2);
 }
