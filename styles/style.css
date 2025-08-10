@@ -89,7 +89,7 @@
 }
 
 .header__title {
-  margin-top: 53px;
+  margin-top: 55px;
   margin-left: 13px;
   font-size: var(--title-size);
   line-height: 0.83em;
@@ -125,7 +125,7 @@
 }
 
 .main {
-  padding-top: 30px;
+  padding-top: 40px;
   background-color: var(--bg-color);
   padding-left: 10px;
   padding-right: 10px;
@@ -170,7 +170,7 @@
 }
 
 .pictures__title {
-  margin-top: 50px;
+  margin-top: 49px;
   margin-bottom: 10px;
 }
 
@@ -243,7 +243,7 @@
   }
 
   .header__title {
-    margin-top: 160px;
+    margin-top: 161px;
     margin-left: 0;
   }
 
@@ -255,6 +255,10 @@
   .header-decor {
     margin-left: 20px;
     margin-top: 138px;
+  }
+
+  .main {
+    padding-top: 30px;
   }
 
   .reasons {
@@ -272,11 +276,11 @@
   
   .reasons article {
     grid-column: 2;
-    margin-left: 14px;
+    margin-left: 20px;
   }
 
   .what-reduces {
-    padding-top: 27px;
+    padding-top: 30px;
     padding-left: 11px;
     padding-right: 10px;
   }
@@ -288,7 +292,7 @@
   .how-good {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: 60px;
+    margin-top: 59px;
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -322,7 +326,8 @@
     "tape books ice-cream"
     "tape street street"
     "tape street street";
-    padding-top: 14px;
+    padding-top: 8px;
+    gap: 21px;
   }
   .img-sunset {
     grid-area: sunset;
@@ -345,7 +350,7 @@
   }
 
   .footer {
-    padding-top: 76px;
+    padding-top: 68px;
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -378,12 +383,16 @@
   }
 
   .header__paragraph {
-    margin-top: 114px;
+    margin-top: 116px;
     min-width: 491px;
   }
 
   .header-decor {
     margin-top: 90px;
+  }
+
+  .reasons article {
+    margin-left: 13px;
   }
 
   .what-reduces {
@@ -411,6 +420,6 @@
 
   .footer__title {
     margin-top: 235px;
-    margin-bottom: 235px;
+    margin-bottom: 240px;
   }
 }
