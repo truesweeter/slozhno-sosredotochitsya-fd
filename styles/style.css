@@ -2,6 +2,7 @@
 
 .page {
   background-image: var(--bg-image);
+  background-color: var(--bg-color);
   background-position: center;
   background-attachment: fixed;
   font-family: "IBM Plex mono", sans-serif;
@@ -11,6 +12,7 @@
 .header {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 
@@ -123,7 +125,7 @@
 }
 
 .main {
-  padding-top: 40px;
+  padding-top: 30px;
   background-color: var(--bg-color);
   padding-left: 10px;
   padding-right: 10px;
@@ -191,6 +193,7 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
+  min-height: 100vh;
 }
 
 .footer__title {
@@ -269,7 +272,7 @@
   
   .reasons article {
     grid-column: 2;
-    margin-left: 17px;
+    margin-left: 14px;
   }
 
   .what-reduces {
