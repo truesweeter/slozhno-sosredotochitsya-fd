@@ -2,6 +2,7 @@
 
 .page {
   background-color: var(--bg-color);
+  background-image: var(--bg-image);
   background-position: center;
   background-attachment: fixed;
   font-family: "IBM Plex mono", sans-serif;
@@ -9,7 +10,6 @@
 }
 
 .header {
-  background-image: var(--bg-image);
   min-height: 668px;
   height: 100vh;
   display: grid;
