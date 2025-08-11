@@ -1,7 +1,6 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: var(--bg-image);
   background-color: var(--bg-color);
   background-position: center;
   background-attachment: fixed;
@@ -10,32 +9,25 @@
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background-image: var(--bg-image);
+  min-height: 668px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
 }
 
 
 .decorative-rec {
-  align-self: end;
+  grid-row: 1/2;
+  justify-self: end;
   font-size: var(--main-font-size);
   color: var(--accent-color);
   line-height: 25px;
   position: absolute;
   display: inline-block;
   margin-top: 10px;
-  margin-right: 39px;
-}
-
-.decorative-rec::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -29px;
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  margin-right: 38px;
 }
 
 .decorative-rec::before {
@@ -50,9 +42,34 @@
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  top: 10px;
+  right: 10px;
+}
+
+.decorated-zone::after {
+  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+
+
 .header__theme-menu {
-  margin-top: 73px;
-  align-self: end;
+  margin-top: 17px;
+  justify-self: end;
+  align-self: center;
   color: var(--accent-color);
   margin-right: 10px;
   font-size: var(--main-font-size);
@@ -89,7 +106,7 @@
 }
 
 .header__title {
-  margin-top: 55px;
+  /* margin-top: 55px; */
   margin-left: 13px;
   font-size: var(--title-size);
   line-height: 0.83em;
@@ -98,13 +115,14 @@
 }
 
 .header__paragraph {
-  margin-top: 55px;
+  align-self: center;
+  justify-self: end;
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 10px;
   font-size: var(--main-font-size);
-  position: relative;
-  width: 355px;
-  align-self: end;
+  max-width: 355px;
+  width: 100%;
 }
 
 .title-decor {
@@ -114,33 +132,27 @@
   line-height: 23.4px;
 }
 
-.header-decor {
-  width: 25px;
-  height: 25px;
-  border-left: 1px solid var(--accent-color);
-  border-bottom: 1px solid var(--accent-color);
-  margin-left: 10px;
-  margin-top: 31px;
-  margin-bottom: 10px;
-}
-
 .main {
   padding-top: 40px;
-  background-color: var(--bg-color);
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 42px;
 }
 
 .main__title {
   color: var(--accent-color);
   font-size: var(--main-font-size);
-  margin-bottom: 10px;
   line-height: 23.4px;
   margin-top: 50px;
 }
 
+.article {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
 .article__title {
-  margin-bottom: 10px;
   margin-top: 20px;
   font-size: var(--main-font-size);
 }
@@ -157,7 +169,7 @@
 }
 
 .article__text a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid currentColor;
 }
 
 .article__text a:focus-visible {
@@ -172,6 +184,7 @@
 .pictures__title {
   margin-top: 49px;
   margin-bottom: 10px;
+  font-size: var(--main-font-size);
 }
 
 .pictures__image {
@@ -185,6 +198,9 @@
 }
 
 .footer {
+  min-height: 668px;
+  height: 100vh;
+  position: relative;
   padding-top: 40px;
   display: flex;
   justify-content: center;
@@ -193,33 +209,16 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  min-height: 100vh;
 }
 
 .footer__title {
   font-size: var(--title-size);
   text-shadow: 2px 2px var(--accent-color);
   color: var(--title-color);
-  margin-top: 222px;
+  margin-top: 190px;
   margin-bottom: 222px;
 }
 
-.footer-decor1 {
-  width: 25px;
-  height: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  margin-left: auto;
-  margin-top: 10px;
-}
-
-.footer-decor2 {
-  width: 25px;
-  height: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  margin-right: auto;
-}
 
 .margin-top-reset {
   margin-top: 0;
@@ -230,71 +229,78 @@
 }
 
 @media (width >= 768px) {
+  :root {
+    --title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .main__title {
+    margin-bottom: 10px;
+  }
+
+  .content__section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .header {
     padding-right: 10px;
   }
 
   .decorative-rec {
     margin-top: 20px;
+    margin-right: 48px;
   }
 
   .header__theme-menu {
-    margin-top: 189px;
+    margin-top: 25px;
   }
 
   .header__title {
-    margin-top: 161px;
+    /* margin-top: 161px; */
     margin-left: 0;
   }
 
   .header__paragraph {
-    margin-top: 165px;
-    min-width: 364px;
-  }
-
-  .header-decor {
-    margin-left: 20px;
-    margin-top: 138px;
+    margin-bottom: 18px;
+    max-width: 364px;
+    width: 100%;
   }
 
   .main {
     padding-top: 30px;
+    padding-bottom: 62px;
   }
 
   .reasons {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    padding-right: 10px;
-    padding-top: 10px;
   }
 
   .reasons .main__title {
     grid-column: 1;
-    padding-top: 20px;
-    margin-left: 12px;
+    padding-top: 30px;
+    padding-right: 10px;
   }
   
   .reasons article {
     grid-column: 2;
-    margin-left: 20px;
+    margin-left: 12px;
+    margin-top: 7px;
   }
 
   .what-reduces {
-    padding-top: 30px;
-    padding-left: 11px;
-    padding-right: 10px;
+    padding-top: 26px;
   }
 
   .what-reduces .main__title {
     width: min-content;
+    margin-bottom: 0;
   }
 
   .how-good {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-top: 59px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
   
   .how-good .main__title {
@@ -309,8 +315,6 @@
 
   .pictures {
     padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
   }
 
   .pictures__image {
@@ -356,18 +360,26 @@
   }
 
   .footer__title {
-    margin-top: 390px;
+    margin-top: 335px;
     margin-bottom: 390px;
   }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
 }
 
 @media (width >= 1024px) {
-  :root {
-    --title-size: 157px;
-  }
-
   .header__theme-menu {
-    margin-top: 20px;
+    align-self: flex-start;
+    margin-top: 18px;
     width: 100%;
   }
 
@@ -379,20 +391,21 @@
   }
 
   .header__title {
-    margin-top: 260px;
+    /* margin-top: 200px; */
   }
 
   .header__paragraph {
-    margin-top: 116px;
-    min-width: 491px;
+    margin-bottom: 20px;
+    max-width: 491px;
+    width: 100%;
   }
 
-  .header-decor {
-    margin-top: 90px;
+  .main {
+    padding-top: 30px;
   }
 
   .reasons article {
-    margin-left: 13px;
+    margin-left: 7px;
   }
 
   .what-reduces {
@@ -400,7 +413,8 @@
   }
 
   .what-reduces .main__title {
-    width: 315px;
+    max-width: 315px;
+    width: 100%;
     margin-bottom: 0;
   }
 
@@ -416,10 +430,14 @@
 
   .pictures {
     padding-left: 8px;
+    padding-top: 36px;
   }
 
   .footer__title {
-    margin-top: 235px;
-    margin-bottom: 240px;
+    margin-top: 330px;
+  }
+  
+  .article__title {
+    margin-top: 19px;
   }
 }
