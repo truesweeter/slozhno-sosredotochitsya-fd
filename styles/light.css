@@ -62,6 +62,16 @@
   .theme-auto .title-decor {
     color: var(--accent-color2);
   }
+
+  .theme-auto .decorated-zone::before {
+    border-top: 1px solid var(--accent-color2);
+    border-right: 1px solid var(--accent-color2);
+  }
+  
+  .theme-auto .decorated-zone::after {
+    border-left: 1px solid var(--accent-color2);
+    border-bottom: 1px solid var(--accent-color2);
+  }
 }
 
 .theme-light .title-decor {
@@ -103,5 +113,15 @@
 }
 
 .theme-light .header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color2);
+}
+
+.theme-light .decorated-zone::before {
+  border-top: 1px solid var(--accent-color2);
+  border-right: 1px solid var(--accent-color2);
+}
+
+.theme-light .decorated-zone::after {
+  border-left: 1px solid var(--accent-color2);
   border-bottom: 1px solid var(--accent-color2);
 }

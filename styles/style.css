@@ -285,11 +285,11 @@
   .reasons article {
     grid-column: 2;
     margin-left: 12px;
-    margin-top: 7px;
+    margin-top: 10px;
   }
 
   .what-reduces {
-    padding-top: 26px;
+    padding-top: 30px;
   }
 
   .what-reduces .main__title {
@@ -330,7 +330,7 @@
     "tape books ice-cream"
     "tape street street"
     "tape street street";
-    padding-top: 8px;
+    padding-top: 10px;
     gap: 21px;
   }
   .img-sunset {
@@ -360,7 +360,7 @@
   }
 
   .footer__title {
-    margin-top: 335px;
+    margin-top: 332px;
     margin-bottom: 390px;
   }
 
@@ -374,6 +374,9 @@
     left: 20px;
   }
 
+  .reasons .margin-top-reset-768px {
+    margin-top: 0;
+  }
 }
 
 @media (width >= 1024px) {
@@ -389,11 +392,6 @@
     margin-left: 32px;
     gap: 11px;
   }
-
-  .header__title {
-    /* margin-top: 200px; */
-  }
-
   .header__paragraph {
     margin-bottom: 20px;
     max-width: 491px;
@@ -402,6 +400,7 @@
 
   .main {
     padding-top: 30px;
+    padding-bottom: 58px;
   }
 
   .reasons article {
@@ -409,7 +408,7 @@
   }
 
   .what-reduces {
-    padding-top: 30px;
+    padding-top: 34px;
   }
 
   .what-reduces .main__title {
@@ -430,7 +429,7 @@
 
   .pictures {
     padding-left: 8px;
-    padding-top: 36px;
+    padding-top: 32px;
   }
 
   .footer__title {
@@ -439,5 +438,9 @@
   
   .article__title {
     margin-top: 19px;
+  }
+
+  .margin-top-3px-1024px {
+    margin-top: 3px;
   }
 }
